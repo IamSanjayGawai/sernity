@@ -223,7 +223,7 @@ const Contact = () => {
               </form>
 
               {/* Contact Hours */}
-              <div className="mt-8 p-6 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl">
+              {/* <div className="mt-8 p-6 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl">
                 <h4 className="font-semibold text-gray-800 mb-3">Office Hours</h4>
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex justify-between">
@@ -239,7 +239,7 @@ const Contact = () => {
                     <span>10:00 AM - 4:00 PM</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

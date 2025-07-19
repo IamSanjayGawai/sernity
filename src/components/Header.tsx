@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '/serenity-logo.png'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,11 +32,11 @@ const Header = () => {
         ? 'bg-white/95 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-1">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-teal-600 animate-fade-in">
-            SERENITY
-          </div>
+
+          <img src={logo} className='h-[75px] w-[200px]' />
+  
           
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">

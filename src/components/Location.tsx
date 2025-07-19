@@ -397,15 +397,17 @@ const schools = [
 
 
 </div>
-  <div className="bg-gradient-to-r from-teal-500 to-blue-600 rounded-2xl p-8 text-white text-center">
-    <h4 className="text-2xl font-bold mb-4">Perfect Connectivity</h4>
-    <p className="mb-6 opacity-90">
-      Experience the convenience of living in a well-connected location with easy access to everything you need.
-    </p>
-    <button className="bg-white text-teal-600 px-8 py-3 rounded-full font-semibold  transform transition-all duration-300 border-2 border-x-2 border-b-teal-600">
-      View Location Map
-    </button>
+<div className="bg-gradient-to-r from-teal-500 to-blue-600 rounded-2xl p-8 text-white text-center">
+  <h4 className="text-2xl font-bold mb-4">View Location Map</h4>
+  <div className="w-full h-full mb-6 rounded-2xl overflow-hidden border-4 border-white">
+    <iframe
+      className="w-full"
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d473.00685591571084!2d73.90030301094069!3d18.481174653729955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI4JzUxLjkiTiA3M8KwNTQnMDIuMSJF!5e0!3m2!1sen!2sin!4v1752939951092!5m2!1sen!2sin" width="600" height="450"   loading="lazy"
+      allowFullScreen
+    ></iframe>
   </div>
+</div>
+
 </div>
         </div>
       </div>

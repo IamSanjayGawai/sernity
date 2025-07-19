@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import logo from '/serenity-logo.png'
 
 const Footer = () => {
   const socialLinks = [
@@ -20,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-blue-500 to-gray-800 text-white relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-teal-900/20 to-blue-900/20"></div>
@@ -33,12 +34,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-6">
-            <h3 className="text-4xl font-bold text-teal-400 mb-4">SERENITY</h3>
+    <img src={logo} className='h-[75px] w-[200px]' />
             <p className="text-gray-300 leading-relaxed">
               Where modern living meets tranquil serenity. Experience the perfect blend of luxury, 
               comfort, and peace in the heart of the city.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -48,7 +49,7 @@ const Footer = () => {
                   <social.icon size={20} />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -100,9 +101,9 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h4 className="text-xl font-semibold mb-6 text-white">Stay Updated</h4>
-            <p className="text-gray-300 mb-6">
+            {/* <p className="text-gray-300 mb-6">
               Subscribe to our newsletter for the latest updates and exclusive offers.
-            </p>
+            </p> */}
             <div className="space-y-4">
               <div className="flex">
                 <input

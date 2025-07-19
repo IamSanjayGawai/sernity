@@ -21,7 +21,7 @@ const Index = () => {
       <Family/>
       <FloorPlans />
       <Features />
-      <Gallery />
+      {/* <Gallery /> */}
       <Amenities />
       <Location />
       <Contact />

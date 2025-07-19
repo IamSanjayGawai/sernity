@@ -97,19 +97,19 @@ const About = () => {
                 <div className="text-6xl mb-4">
                   <img src={sammedBuilding} />
                 </div>
-                <h4 className="text-2xl font-semibold mb-4">Modern Architecture</h4>
+                {/* <h4 className="text-2xl font-semibold mb-4">Modern Architecture</h4>
                 <p className="opacity-90">
                   Contemporary design meets functional elegance in every corner of Serenity.
-                </p>
+                </p> */}
               </div>
             </div>
                    <div>
                     <div className='w-full flex justify-center items-center flex-col'>
                           <img src={sammedDevelopers} className='lg:h-50 lg:w-50' />
-                              <h3 className="text-5xl font-extrabold mb-6">Truly Inspired by Legacy</h3>
+                              <h3 className="text-3xl md:text-5xl font-extrabold mb-6">Truly Inspired by Legacy</h3>
                           </div>
           
-              <p className="text-xl mb-8 opacity-90">
+              <p className=" text-sm md:text-xl mb-8 opacity-90">
  With over 34 years of industry experience, have successfully delivered numerous projects, earning a reputation built on strong values, ethics, and transparency. Committed to customer satisfaction, we prioritize quality craftsmanship and timely delivery, ensuring every home we build becomes a trusted sanctuary for our buyers. Our dedication to excellence and integrity sets us apart in creating lasting relationships and exceptional living spaces.
               </p>
               <div className="space-y-4">

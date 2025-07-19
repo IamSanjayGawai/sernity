@@ -54,14 +54,18 @@ const Hero = () => {
 
             <div className='hidden sm:block'>
                 
-          <h1 className="text-6xl md:text-8xl font-bold text-teal-600 mb-4 animate-scale-in">
-            SERENITY
-          </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-teal-400 to-blue-500 mx-auto mb-6 animate-slide-in-right"></div>
-          <p className="text-xl md:text-2xl text-gray-600 mb-2 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            Rise Above | Live Beyond
+          {/* <h1 className="text-3xl md:text-5xl font-bold text-teal-600 mb-4 animate-scale-in">
+                 Rise Above,  Live Beyond!
+          </h1> */}
+          <h1 className="text-3xl md:text-6xl font-bold text-teal-600 mb-4 animate-scale-in font-playfair">
+  Rise<span className='text-2xl md:text-4xl'> Above, </span>Live<span className='text-2xl md:text-4xl'> Beyond!</span>
+</h1>
+
+          {/* <div className="w-32 h-1 bg-gradient-to-r from-teal-400 to-blue-500 mx-auto mb-6 animate-slide-in-right"></div> */}
+          <p className="text-xl md:text-2xl text-gray-600 mb-2 animate-fade-in " style={{ animationDelay: '0.5s' }}>
+    
           </p>
-          <p className="text-lg text-gray-500 animate-fade-in" style={{ animationDelay: '0.7s' }}>
+          <p className="text-lg text-gray-500 animate-fade-in font-bold" style={{ animationDelay: '0.7s' }}>
             A New Chapter Begins
           </p>
           </div>

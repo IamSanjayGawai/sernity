@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Maximize, Maximize2, Expand, Grid2X2 } from 'lucide-react';
 import floor_plan from '/floor_plan.png'
 import parking from '/parking.png'
+import terrace from '/top-roof-paln.png'
 
 
 const FloorPlans = () => {
@@ -12,23 +13,27 @@ const FloorPlans = () => {
 
   const floorPlans = [
     {
-      type: "3 BHK: 101",
-      carpet_area: "1038 sq ft",
-      dry_balcony: "30 sq ft",
-      balcony_area: "79 sq ft",
-      total_area: "1147 sq ft",
-      total_area_m: "106.59 sq m",
+      type: "3 BHK",
+      plan_type: "3 BHK : 101",
+      unit: "101",
+      carpet_area: "1038 ",
+      dry_balcony: "30 ",
+      balcony_area: "79 ",
+      total_area: "1147 ",
+      total_area_m: "106.59 ",
       // description: "Ideal for small families seeking comfort",
       features: ["Master Bedroom", "Guest Room", "2 Bathrooms", "Large Balcony"],
       // color: "from-teal-400 to-teal-600"
     },
     {
-      type: "3 BHK: 102",
-      carpet_area: "1048 sq ft",
-      dry_balcony: "30 sq ft",
-      balcony_area: "110 sq ft",
-      total_area: "1188 sq ft",
-      total_area_m: "110.39 sq m",
+      type: "3 BHK",
+      plan_type: "3 BHK : 102",
+      unit: "102",
+      carpet_area: "1048 ",
+      dry_balcony: "30 ",
+      balcony_area: "110 ",
+      total_area: "1188 ",
+      total_area_m: "110.39 ",
       // description: "Ideal for small families seeking comfort",
       features: ["Master Bedroom", "Guest Room", "2 Bathrooms", "Large Balcony"],
       // color: "from-teal-400 to-teal-600"
@@ -90,7 +95,7 @@ const FloorPlans = () => {
                     : 'text-gray-600 hover:text-teal-500'
                 }`}
               >
-                {plan.type}
+                {plan.plan_type}
               </button>
             ))}
           </div>
@@ -114,34 +119,56 @@ const FloorPlans = () => {
                 {/* Plan Details */}
                 <div className="space-y-8">
                   <div>
-                    {/* <h4 className="text-3xl font-bold text-gray-800 mb-4">{plan.type} Residence</h4> */}
+                    <h4 className="text-2xl font-bold text-gray-800 mb-1 text-center">Area Statement</h4>
                     {/* <p className="text-xl text-gray-600 mb-6">{plan.description}</p> */}
-                    
-                    <div className="grid grid-cols-2  lg:grid-cols-5 gap-4 mb-8">
-                      <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                        <Maximize2 className="mx-auto mb-2 text-teal-500" size={32} />
-                        <div className="font-semibold text-gray-800">{plan.carpet_area}</div>
-                        <div className="text-sm text-gray-600">Carpet Area</div>
+                    <div className="grid grid-cols-2  lg:grid-cols-7 gap-4 mb-8">
+
+                                     <div className="text-center p-4 bg-gray-50 rounded-2xl">
+                        {/* <Maximize2 className="mx-auto mb-2 text-teal-500" size={32} /> */}
+                        <div className="font-semibold  text-gray-800">Unit</div>
+                        <div className="font-semibold text-gray-500">{plan.unit}</div>
+                        
+                      </div>
+            
+                               <div className="text-center p-4 bg-gray-50 rounded-2xl">
+                        {/* <Maximize2 className="mx-auto mb-2 text-teal-500" size={32} /> */}
+                        <div className="font-semibold  text-gray-800">Type</div>
+                        <div className="font-semibold text-gray-500">{plan.type}</div>
+                        
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                        <Maximize className="mx-auto mb-2 text-teal-500" size={32} />
-                        <div className="font-semibold text-gray-800">{plan.dry_balcony}</div>
-                        <div className="text-sm text-gray-600">Dry Balcony</div>
+                        {/* <Maximize2 className="mx-auto mb-2 text-teal-500" size={32} /> */}
+                        <div className="font-semibold text-gray-800">Carpet Area</div>
+                            <div className="font-semibold text-gray-800">{`(SQ.FT)`}</div>
+                        <div className="font-semibold text-gray-500">{plan.carpet_area}</div>
+                        
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                        <Maximize className="mx-auto mb-2 text-teal-500" size={32} />
-                        <div className="font-semibold text-gray-800">{plan.balcony_area}</div>
-                        <div className="text-sm text-gray-600">Balcony Area</div>
+                        {/* <Maximize className="mx-auto mb-2 text-teal-500" size={32} /> */}
+                        <div className="font-semibold text-gray-800">Dry Balcony</div>
+                        <div className="font-semibold text-gray-800">{`(SQ.FT)`}</div>
+                        <div className="font-semibold text-gray-500">{plan.dry_balcony}</div>
+                        
+                      </div>
+                      <div className="text-center p-4 bg-gray-50 rounded-2xl">
+                        {/* <Maximize className="mx-auto mb-2 text-teal-500" size={32} /> */}
+                        <div className="font-semibold text-gray-800">Balcony Area</div>
+                         <div className="font-semibold text-gray-800">{`(SQ.FT)`}</div>
+                        <div className="font-semibold text-gray-500">{plan.balcony_area}</div>
                       </div>
                                 <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                        <Grid2X2 className="mx-auto mb-2 text-teal-500" size={32} />
-                        <div className="font-semibold text-gray-800">{plan.total_area}</div>
-                        <div className="text-sm text-gray-600">Tatal Area Sq. Ft.</div>
+                        {/* <Grid2X2 className="mx-auto mb-2 text-teal-500" size={32} /> */}
+                         <div className="font-semibold text-gray-800">Tatal Area</div>
+                         <div className="font-semibold text-gray-800">{`(SQ.FT)`}</div>
+                        <div className="font-semibold text-gray-500">{plan.total_area}</div>
+    
                       </div>
                                 <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                        <Expand className="mx-auto mb-2 text-teal-500" size={32} />
-                        <div className="font-semibold text-gray-800">{plan.total_area_m}</div>
-                        <div className="text-sm text-gray-600">Tatal Area Sq. M.</div>
+                        {/* <Expand className="mx-auto mb-2 text-teal-500" size={32} /> */}
+                        <div className="font-semibold text-gray-800">Tatal Area</div>
+                         <div className="font-semibold text-gray-800">{`(SQ.M)`}</div>
+                        <div className="font-semibold text-gray-500">{plan.total_area_m}</div>
+            
                       </div>
                     </div>
                   </div>
@@ -173,12 +200,21 @@ const FloorPlans = () => {
           <img src={floor_plan} className='w-full' />
         </div>
 
+                      <div className='flex justify-center items-center flex-col' >
+                  <h2 className='text-4xl font-bold mt-5 mb-5'>Top Terrace Plan</h2>
+                <div className=' w-[70%]'>
+          <img src={terrace} className='w-full' />
+        </div>
+        </div>
+
+
                 <div className='flex justify-center items-center flex-col' >
                   <h2 className='text-4xl font-bold mt-5 mb-5'>Parking</h2>
                 <div className=' w-[70%]'>
           <img src={parking} className='w-full' />
         </div>
         </div>
+
 
         
       </div>
