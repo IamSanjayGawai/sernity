@@ -1,6 +1,11 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Expand } from 'lucide-react';
+import building from '/Building1.png'
+import structure from "/3Bhkcutsection.png";
+import building2 from "/Building2.png";
+
+
 
 const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,17 +14,17 @@ const Gallery = () => {
 
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80",
+      url: building,
       title: "Modern Living Room",
       description: "Spacious and elegantly designed living spaces"
     },
     {
-      url: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80",
+      url: structure,
       title: "Architectural Excellence",
       description: "Contemporary design meets functional beauty"
     },
     {
-      url: "https://images.unsplash.com/photo-1527576539890-dfa815648363?auto=format&fit=crop&w=800&q=80",
+      url: building2,
       title: "Premium Interiors",
       description: "Luxury finishes and modern amenities"
     },
@@ -93,7 +98,7 @@ const Gallery = () => {
                 <img
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill"
                 />
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">

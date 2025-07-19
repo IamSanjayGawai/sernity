@@ -5,7 +5,7 @@ import { Shield, Wifi, Car, Droplets, Wind, Sun,   Landmark,
   Shuffle,
   Snowflake,
   Building2, } from 'lucide-react';
-  import building from '/building-highlihghts.png'
+  import building from '/Building1.png'
 
 const Features = () => {
   const [isVisible, setIsVisible] = useState(false);

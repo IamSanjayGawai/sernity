@@ -28,7 +28,7 @@ import {
   Grid2X2,
   Circle,
 } from "lucide-react";
-import structure from "/structure.png";
+import structure from "/3Bhkcutsection.png";
 
 const Amenities = () => {
   const [isVisible, setIsVisible] = useState(false);
