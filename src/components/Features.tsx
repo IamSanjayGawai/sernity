@@ -6,6 +6,7 @@ import { Shield, Wifi, Car, Droplets, Wind, Sun,   Landmark,
   Snowflake,
   Building2, } from 'lucide-react';
   import building from '/Building1.png'
+  import building2 from '/Building2.png'
 
 const Features = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -133,6 +134,11 @@ const Features = () => {
           <div className='w-full'>
 
             <img src={building} className='w-full rounded-3xl' />
+          </div>
+
+               <div className='w-full'>
+
+            <img src={building2} className='w-full rounded-3xl' />
           </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
