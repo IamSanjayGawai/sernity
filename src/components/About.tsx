@@ -110,7 +110,13 @@ const About = () => {
                           </div>
           
               <p className=" text-sm md:text-xl mb-8 opacity-90">
- With over 34 years of industry experience, have successfully delivered numerous projects, earning a reputation built on strong values, ethics, and transparency. Committed to customer satisfaction, we prioritize quality craftsmanship and timely delivery, ensuring every home we build becomes a trusted sanctuary for our buyers. Our dedication to excellence and integrity sets us apart in creating lasting relationships and exceptional living spaces.
+              With over 34 years of experience, we have successfully delivered numerous
+projects, earning a reputation built on strong values, ethics, and transparency.
+Committed to customer satisfaction, we prioritize quality craftsmanship and
+timely delivery, ensuring every home we build becomes a trusted sanctuary for
+our buyers. Our dedication to excellence and integrity sets us apart in creating
+lasting relationships and exceptional living spaces.
+
               </p>
               <div className="space-y-4">
                 {/* <div className="flex items-center space-x-3">

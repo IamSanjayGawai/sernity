@@ -2,6 +2,8 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import logo from '/serenity-logo.png'
+import rera from '/rera-logo.png'
+import WhatsAppButton from './WhatsAppButton';
 
 const Footer = () => {
   const socialLinks = [
@@ -100,27 +102,16 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-xl font-semibold mb-6 text-white">Stay Updated</h4>
+            <h4 className="text-xl font-semibold mb-6 text-white">MAHARASHTRA RERA NO.</h4>
             {/* <p className="text-gray-300 mb-6">
               Subscribe to our newsletter for the latest updates and exclusive offers.
             </p> */}
-            <div className="space-y-4">
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-4 py-3 bg-gray-700 text-white rounded-l-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
-                />
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 px-6 py-3 rounded-r-xl hover:scale-105 transform transition-all duration-300">
-                  <Mail size={20} />
-                </button>
+           <div className="flex items-center space-x-3">
+               <img src={rera} className='h-[100px] w-[100px] rounded-full' />
+                <div className="text-gray-300">
+                  <p>PR1260002500999</p>
+                </div>
               </div>
-              <div className="text-sm text-gray-400">
-                <p>✓ Latest project updates</p>
-                <p>✓ Exclusive early bird offers</p>
-                <p>✓ Investment opportunities</p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -139,11 +130,14 @@ const Footer = () => {
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute bottom-4 right-4 text-6xl animate-bounce" style={{ animationDuration: '3s' }}>
+        {/* <div className="absolute bottom-4 right-4 text-6xl animate-bounce" style={{ animationDuration: '3s' }}>
           🦋
-        </div>
+        </div> */}
       </div>
+      <WhatsAppButton />
     </footer>
+
+    
   );
 };
 
