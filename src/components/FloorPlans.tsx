@@ -7,7 +7,7 @@ import terrace from '/top-roof-paln.png'
 
 
 const FloorPlans = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [activeFloor, setActiveFloor] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +52,7 @@ const FloorPlans = () => {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
+    if (sectionRef?.current) {
       observer.observe(sectionRef.current);
     }
 
