@@ -65,9 +65,9 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-gray-600 mb-2 animate-fade-in " style={{ animationDelay: '0.5s' }}>
     
           </p>
-          <p className="text-lg text-gray-500 animate-fade-in font-bold" style={{ animationDelay: '0.7s' }}>
+          {/* <p className="text-lg text-gray-500 animate-fade-in font-bold" style={{ animationDelay: '0.7s' }}>
             A New Chapter Begins
-          </p>
+          </p> */}
           </div>
       
 
