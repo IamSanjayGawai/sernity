@@ -133,7 +133,7 @@ const Contact = () => {
                       {info.title}
                     </h3>
                     {info.details.map((detail, i) => (
-                      <p key={i} className="text-gray-600 mb-1">
+                      <p key={i} className="text-gray-600 mb-1 select-none">
                         {detail}
                       </p>
                     ))}
