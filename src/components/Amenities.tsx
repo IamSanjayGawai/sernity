@@ -476,7 +476,7 @@ const projectSpecifications = [
         </div>
       </section>
       <div className="w-full flex justify-center items-center mb-5">
-        <img src={structure1} className="lg:w-[80%] lg:h-full h-[400px] " />
+        <img src={structure1} className="lg:w-[80%] lg:h-full h-[200px] " />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="w-full flex justify-center items-center">
