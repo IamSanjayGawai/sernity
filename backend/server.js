@@ -1,5 +1,4 @@
-// server.js
-import express from "express";
+// import express from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -8,7 +7,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: "*" })); 
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -18,22 +17,29 @@ app.post("/api/contact", async (req, res) => {
     const { name, email, phone, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
       auth: {
-        user: process.env.EMAIL_USER, // your Gmail
-        pass: process.env.EMAIL_PASS, // app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
+    });
+
+    transporter.verify((err, success) => {
+      if (err) console.error("SMTP verification failed:", err);
+      else console.log("SMTP ready");
     });
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "sammeddevelopers@gmail.com", // your company email
+      to: "sammeddevelopers@gmail.com",
       subject: `New Inquiry from ${name}`,
       text: `
-        Name: ${name}
-        Email: ${email}
-        Phone: ${phone}
-        Message: ${message}
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Message: ${message}
       `,
     };
 
@@ -47,5 +53,5 @@ app.post("/api/contact", async (req, res) => {
 });
 
 app.listen(PORT, () =>
-  console.log(`🚀 Server running at http://localhost:${PORT}`)
+  console.log(`🚀 Server running on port ${PORT}`)
 );
