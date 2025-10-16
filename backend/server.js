@@ -70,14 +70,13 @@ app.post("/api/contact", async (req, res) => {
     const { name, email, phone, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER, // your Gmail
+        pass: process.env.EMAIL_PASS, // app password
       },
     });
+    
 
     transporter.verify((err, success) => {
       if (err) console.error("SMTP verification failed:", err);
