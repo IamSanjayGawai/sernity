@@ -35,7 +35,7 @@ const Contact = () => {
     setLoading(true);
   
     // 1️⃣ Download brochure immediately
-    const brochureUrl = "/serenity-brochure.pdf"; // Must be in public folder
+    const brochureUrl = "/Serenity-Brochure.pdf";    // Must be in public folder
     const link = document.createElement("a");
     link.href = brochureUrl;
     link.setAttribute("download", "Serenity-Brochure.pdf");
